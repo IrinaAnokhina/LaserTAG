@@ -63,7 +63,7 @@ void Error_Handler(void);
 #define Button_Pin GPIO_PIN_0
 #define Button_GPIO_Port GPIOB
 #define Button_EXTI_IRQn EXTI0_1_IRQn
-#define SOFT_ON_Pin GPIO_PIN_4
+#define SOFT_ON_Pin GPIO_PIN_5
 #define SOFT_ON_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 

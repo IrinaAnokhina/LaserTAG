@@ -99,13 +99,15 @@ int main(void)
 		if(button_cl == 1)
 		{
 			HAL_GPIO_WritePin(SOFT_ON_GPIO_Port, SOFT_ON_Pin, GPIO_PIN_SET);
-			HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);	
+			HAL_Delay(1);
+			HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);	
 			HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
 		}
 		else if(button_cl == 2)
 		{
 			button_cl = 0;
-			HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_2);
+			HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);
+			HAL_Delay(1);
 			HAL_GPIO_WritePin(SOFT_ON_GPIO_Port, SOFT_ON_Pin, GPIO_PIN_RESET);
 			HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
 		}
